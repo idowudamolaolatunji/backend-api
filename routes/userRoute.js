@@ -10,8 +10,6 @@ const router = express.Router();
 router.post("/signup", authController.signupUser);
 router.post("/login", authController.loginUser);
 
-// router.get("/verify", protectedRoute);
-
 router.patch("/upload-image", protectedRoute, uploadToServer, userController.uploadImage);
 
 module.exports = router;
